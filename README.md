@@ -7,18 +7,22 @@ An end-to-end ETL (Extract, Transform, Load) pipeline that fetches live weather 
 - **PostgreSQL** – data storage
 - **PySpark** – data transformation
 - **Apache Airflow** – workflow orchestration (in progress)
-
 ## Architecture
+
+```
 OpenWeatherMap API
-│
-▼
-extract/fetch_weather.py   (fetches raw weather data)
-│
-▼
-transform/transform_weather.py   (PySpark: unit conversion, categorization)
-│
-▼
-load/load_to_postgres.py   (inserts into PostgreSQL)
+        │
+        ▼
+extract/fetch_weather.py        (fetches raw weather data)
+        │
+        ▼
+transform/transform_weather.py  (PySpark: unit conversion, categorization)
+        │
+        ▼
+load/load_to_postgres.py.       (inserts into PostgreSQL)
+```
+
+
 
 ## Features
 - Fetches real-time weather data (temperature, humidity, wind speed, conditions) for a given city
