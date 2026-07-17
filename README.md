@@ -30,18 +30,23 @@ load/load_to_postgres.py.       (inserts into PostgreSQL)
 - Loads structured, transformed data into a PostgreSQL table
 - Environment variables used for API key management (`.env`, not committed to version control)
 
+
 ## Project Structure
+
+```
 weather-etl-pipeline/
 ├── extract/
-│   └── fetch_weather.py       # Calls OpenWeatherMap API
+│   └── fetch_weather.py            # Calls OpenWeatherMap API
 ├── transform/
-│   └── transform_weather.py   # PySpark transformation logic
+│   └── transform_weather.py        # PySpark transformation logic
 ├── load/
-│   └── load_to_postgres.py    # Inserts data into PostgreSQL
-├── run_pipeline.py            # Orchestrates extract → transform → load
-├── .env                       # API key (not committed)
+│   └── load_to_postgres.py         # Inserts data into PostgreSQL
+├── run_pipeline.py                 # Orchestrates extract → transform → load
+├── .env                            # API key (not committed)
 ├── .gitignore
 └── README.md
+```
+
 
 ## Setup & Usage
 
