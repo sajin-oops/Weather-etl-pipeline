@@ -1,5 +1,14 @@
+import os
+import pyspark
+
+spark_home = os.path.dirname(pyspark.__file__)
+os.environ["SPARK_HOME"] = spark_home
+os.environ["PYSPARK_PYTHON"] = os.sys.executable
+os.environ["PYSPARK_DRIVER_PYTHON"] = os.sys.executable
+
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, when, round as spark_round
+
 
 def get_spark_session():
     return SparkSession.builder \
