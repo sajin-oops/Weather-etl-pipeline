@@ -6,7 +6,7 @@ An end-to-end ETL (Extract, Transform, Load) pipeline that fetches live weather 
 - **Python** – core scripting
 - **PostgreSQL** – data storage
 - **PySpark** – data transformation
-- **Apache Airflow** – workflow orchestration (in progress)
+- **Apache Airflow** – workflow orchestration 
 ## Architecture
 
 ```
